@@ -1,0 +1,2 @@
+# Los .bat de Windows necesitan fines de línea CRLF, también en la descarga ZIP de GitHub.
+*.bat text eol=crlf
