@@ -1,0 +1,5 @@
+Pon aquí los documentos privados que quieras que el agente pueda consultar (.txt, .md; .pdf si tienes pypdf;
+.docx si tienes python-docx). El servidor los lee solo y los vuelve a leer si cambian.
+
+Estos documentos NUNCA entran al entrenamiento ni se suben a Kaggle ni al repositorio: esta carpeta está en el
+.gitignore. El modelo los ve únicamente cuando llama a buscar_documentos con la colección "privada" o "todas".

@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "nota": "Contrato fijo. El modelo se entrena con estas herramientas exactas. No se cambian nombres ni parámetros después del fine-tune.",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "buscar_documentos",
+        "description": "Busca fragmentos en la colección de documentos (públicos y privados). Devuelve texto, fuente, fecha, época y página. Úsala antes de afirmar cualquier hecho, cifra o fecha.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "consulta": {"type": "string", "description": "Qué buscar, en lenguaje natural"},
+            "epoca": {"type": "string", "description": "Opcional. Id de época (P01–P05, E01–E15, T01–T04) para filtrar"},
+            "coleccion": {"type": "string", "enum": ["publica", "privada", "todas"], "default": "todas"},
+            "max_resultados": {"type": "integer", "default": 5, "minimum": 1, "maximum": 15}
+          },
+          "required": ["consulta"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "leer_documento",
+        "description": "Abre un documento completo, o una sección, cuando el fragmento de buscar_documentos no alcanza.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "doc_id": {"type": "string"},
+            "seccion": {"type": "string", "description": "Opcional. Página o rango, ej. '12-15'"}
+          },
+          "required": ["doc_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "consultar_cifras",
+        "description": "Consulta la tabla estructurada de cifras (homicidios, detenciones, prórrogas, muertes bajo custodia, aprobación presidencial…). Cada fila trae valor, fuente, atribución y fecha de corte. Puede haber varias filas para la misma métrica si las fuentes no coinciden.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "metrica": {"type": "string", "description": "Una de: homicidios, detenciones_regimen, detenciones_mano_dura, prorrogas, muertes_custodia, presos_politicos, elecciones_presidenciales, victimas_guerra_civil, ayuda_eeuu_guerra, despliegue_haiti"},
+            "desde": {"type": "string", "description": "Año o fecha ISO"},
+            "hasta": {"type": "string", "description": "Año o fecha ISO"}
+          },
+          "required": ["metrica"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "linea_tiempo",
+        "description": "Devuelve los eventos ordenados de una época o de un rango de fechas, con su fuente.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "epoca": {"type": "string"},
+            "desde": {"type": "string"},
+            "hasta": {"type": "string"}
+          }
+        }
+      }
+    }
+  ]
+}

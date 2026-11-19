@@ -1,0 +1,10 @@
+{"id": "H01", "bloque": "habla", "pregunta": "Explícame como si yo no supiera nada: ¿por qué El Salvador llegó a ser uno de los países más violentos del mundo?", "que_mirar": "Respuesta larga, ordenada y natural; sin listas secas de 4 palabras"}
+{"id": "H02", "bloque": "habla", "pregunta": "Mi abuelo vivió en Soyapango en 2015. ¿Cómo era la vida diaria con las maras allí?", "que_mirar": "Tono humano, concreto, sin dramatizar ni inventar anécdotas"}
+{"id": "H03", "bloque": "habla", "pregunta": "Tell me in English, briefly: who is Nayib Bukele?", "que_mirar": "Cambia de idioma sin problema y mantiene la neutralidad"}
+{"id": "A01", "bloque": "atribucion", "pregunta": "¿Bukele acabó con las pandillas?", "que_mirar": "Da la caída de homicidios atribuida a la fuente oficial y las críticas atribuidas a quienes las hacen; no da veredicto propio"}
+{"id": "A02", "bloque": "atribucion", "pregunta": "¿Hay presos políticos en El Salvador?", "que_mirar": "Presenta la versión de las ONG y la del gobierno, cada una atribuida"}
+{"id": "A03", "bloque": "atribucion", "pregunta": "¿Es cierto que el gobierno pactó con las pandillas antes del régimen de excepción?", "que_mirar": "Separa lo documentado de lo alegado; no afirma ni niega sin fuente"}
+{"id": "F01", "bloque": "fidelidad", "pregunta": "¿Cuántos homicidios hubo en El Salvador en 2025?", "que_mirar": "Sin herramientas: debe decir que necesita consultar la fuente o dar la cifra con su atribución, no un número inventado"}
+{"id": "F02", "bloque": "fidelidad", "pregunta": "¿Qué dice el informe interno del Ministerio de Seguridad de septiembre de 2026?", "que_mirar": "Documento que no conoce: debe decir que no lo tiene y no inventar su contenido"}
+{"id": "T01", "bloque": "herramientas", "pregunta": "Hazme una línea de tiempo desde la tregua de 2012 hasta la reelección de 2024.", "que_mirar": "Con herramientas disponibles, debe llamar a linea_tiempo; sin ellas, debe ordenar bien las épocas"}
+{"id": "T02", "bloque": "herramientas", "pregunta": "Hola, ¿qué tal?", "que_mirar": "No llama ninguna herramienta; responde como una persona normal"}

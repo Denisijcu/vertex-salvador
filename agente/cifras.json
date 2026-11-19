@@ -1,0 +1,241 @@
+{
+  "nota": "Tabla de cifras de vertex-salvador. Cada fila apunta al fragmento verificado que la sostiene (doc_id) y dice de quién es la cifra (atribucion). Para añadir filas: primero el fragmento aprobado, después la fila.",
+  "metricas": {
+    "homicidios": [
+      {
+        "periodo": "1995",
+        "valor": "139 por cada 100.000 habitantes",
+        "atribucion": "Wikipedia",
+        "doc_id": "FR-E02-005"
+      },
+      {
+        "periodo": "1999",
+        "valor": "2.340 muertes violentas",
+        "atribucion": "Policía, citada por EFE",
+        "doc_id": "FR-E03-007"
+      },
+      {
+        "periodo": "2003",
+        "valor": "2.388 muertes violentas",
+        "atribucion": "Policía, citada por EFE",
+        "doc_id": "FR-E03-007"
+      },
+      {
+        "periodo": "2004",
+        "valor": "2.933 muertes violentas",
+        "atribucion": "Policía, citada por EFE",
+        "doc_id": "FR-E03-007"
+      },
+      {
+        "periodo": "2006",
+        "valor": "64,7 por cada 100.000 habitantes",
+        "atribucion": "Wikipedia",
+        "doc_id": "FR-E03-007"
+      },
+      {
+        "periodo": "marzo-diciembre de 2011",
+        "valor": "3.697",
+        "atribucion": "El Diario NY",
+        "doc_id": "FR-E04-005"
+      },
+      {
+        "periodo": "marzo-diciembre de 2012",
+        "valor": "1.761",
+        "atribucion": "El Diario NY",
+        "doc_id": "FR-E04-005"
+      },
+      {
+        "periodo": "2015",
+        "valor": "6.657 homicidios; 103 por cada 100.000",
+        "atribucion": "estadísticas oficiales",
+        "doc_id": "FR-E05-001"
+      },
+      {
+        "periodo": "2016",
+        "valor": "81 por cada 100.000",
+        "atribucion": "fuentes oficiales citadas por AFP",
+        "doc_id": "FR-E05-003"
+      },
+      {
+        "periodo": "2017",
+        "valor": "60 por cada 100.000",
+        "atribucion": "fuentes oficiales citadas por AFP",
+        "doc_id": "FR-E05-003"
+      },
+      {
+        "periodo": "2018",
+        "valor": "51 por cada 100.000; 3.340 asesinatos",
+        "atribucion": "fuentes oficiales citadas por AFP",
+        "doc_id": "FR-E05-003"
+      },
+      {
+        "periodo": "2021",
+        "valor": "1.211",
+        "atribucion": "cifras oficiales",
+        "doc_id": "FR-E11-004"
+      },
+      {
+        "periodo": "2022",
+        "valor": "615",
+        "atribucion": "cifras oficiales",
+        "doc_id": "FR-E11-004"
+      },
+      {
+        "periodo": "2023",
+        "valor": "194",
+        "atribucion": "cifras oficiales",
+        "doc_id": "FR-E11-004"
+      },
+      {
+        "periodo": "2024",
+        "valor": "114",
+        "atribucion": "cifras oficiales",
+        "doc_id": "FR-E11-004"
+      },
+      {
+        "periodo": "2025",
+        "valor": "82",
+        "atribucion": "cifras oficiales",
+        "doc_id": "FR-E11-004"
+      },
+      {
+        "periodo": "enero-octubre de 2026",
+        "valor": "48",
+        "atribucion": "Policía Nacional Civil",
+        "doc_id": "FR-E14-003"
+      }
+    ],
+    "detenciones_regimen": [
+      {
+        "periodo": "enero de 2023",
+        "valor": "más de 62.000",
+        "atribucion": "Wikipedia",
+        "doc_id": "FR-E11-003"
+      },
+      {
+        "periodo": "febrero de 2026",
+        "valor": "más de 91.300",
+        "atribucion": "decreto de prórroga de la Asamblea Legislativa",
+        "doc_id": "FR-E14-002"
+      }
+    ],
+    "detenciones_mano_dura": [
+      {
+        "periodo": "julio de 2003 a agosto de 2004",
+        "valor": "19.275 arrestos; 17.540 liberados por falta de pruebas",
+        "atribucion": "Policía, según InSight Crime",
+        "doc_id": "FR-E03-002"
+      },
+      {
+        "periodo": "2003-2005",
+        "valor": "más de 30.000 arrestos",
+        "atribucion": "Migration Policy Institute",
+        "doc_id": "FR-E03-006"
+      }
+    ],
+    "prorrogas": [
+      {
+        "periodo": "24 de junio de 2026",
+        "valor": "prórroga número 52",
+        "atribucion": "Asamblea Legislativa",
+        "doc_id": "FR-E14-001"
+      }
+    ],
+    "muertes_custodia": [
+      {
+        "periodo": "régimen de excepción (hasta 2026)",
+        "valor": "530",
+        "atribucion": "Socorro Jurídico Humanitario",
+        "doc_id": "FR-E14-008"
+      },
+      {
+        "periodo": "régimen de excepción (hasta marzo de 2026)",
+        "valor": "al menos 500",
+        "atribucion": "organización salvadoreña citada por el Tico Times",
+        "doc_id": "FR-E14-008"
+      }
+    ],
+    "presos_politicos": [
+      {
+        "periodo": "marzo de 2026",
+        "valor": "al menos 86",
+        "atribucion": "Cristosal (el gobierno lo rechaza)",
+        "doc_id": "FR-E14-006"
+      }
+    ],
+    "elecciones_presidenciales": [
+      {
+        "periodo": "1972",
+        "valor": "Molina declarado ganador con 43 %",
+        "atribucion": "Wikipedia",
+        "doc_id": "FR-P03-001"
+      },
+      {
+        "periodo": "2019",
+        "valor": "Bukele 53 %",
+        "atribucion": "Primicias / EFE",
+        "doc_id": "FR-E07-001"
+      },
+      {
+        "periodo": "2024",
+        "valor": "Bukele 84,65 % (2.701.725 votos)",
+        "atribucion": "Tribunal Supremo Electoral",
+        "doc_id": "FR-E12-001"
+      },
+      {
+        "periodo": "2024 (votos de Bukele sobre todo el padrón, no sobre los votos válidos)",
+        "valor": "43,48 % del padrón (6.214.399 habilitados; más de 2,9 millones no votaron)",
+        "atribucion": "cálculo de El Diario de Hoy",
+        "doc_id": "FR-E12-003"
+      }
+    ],
+    "victimas_guerra_civil": [
+      {
+        "periodo": "1980-1992",
+        "valor": "más de 75.000 muertos y 7.000 desaparecidos",
+        "atribucion": "EFE",
+        "doc_id": "FR-E01-009"
+      },
+      {
+        "periodo": "1980-1992",
+        "valor": "75.000 muertos, 8.000 desaparecidos y 12.000 presos",
+        "atribucion": "Voz de América",
+        "doc_id": "FR-E01-009"
+      }
+    ],
+    "ayuda_eeuu_guerra": [
+      {
+        "periodo": "1979-1991",
+        "valor": "más de 6.000 millones de dólares",
+        "atribucion": "California Migration Project",
+        "doc_id": "FR-E01-010"
+      },
+      {
+        "periodo": "1980-1988",
+        "valor": "3.348,5 millones de dólares",
+        "atribucion": "Universidad de El Salvador",
+        "doc_id": "FR-E01-010"
+      }
+    ],
+    "despliegue_haiti": [
+      {
+        "periodo": "primer contingente (misión liderada por Kenia)",
+        "valor": "70 soldados para evacuaciones médicas",
+        "atribucion": "Voz de América",
+        "doc_id": "FR-E15-003"
+      },
+      {
+        "periodo": "28 de octubre de 2026",
+        "valor": "más de 2.000 militares",
+        "atribucion": "Cancillería salvadoreña, según El Diario de Hoy",
+        "doc_id": "FR-E15-008"
+      },
+      {
+        "periodo": "octubre de 2026 (toda la GSF)",
+        "valor": "más de 2.000 tropas de seis países, alrededor del 37 % de lo previsto",
+        "atribucion": "Latin Times",
+        "doc_id": "FR-E15-021"
+      }
+    ]
+  }
+}

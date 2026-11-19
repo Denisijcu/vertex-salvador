@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# vertex-salvador — lo que NO se sube al repositorio
+# ---------------------------------------------------------------------------
+
+# El manuscrito del libro nunca va al repositorio
+libro/
+
+# Documentos privados: solo los lee el servidor local; nunca se comparten
+agente/docs_privados/*
+!agente/docs_privados/LEEME.txt
+
+# Entornos de Python
+.venv/
+agente/.venv/
+venv/
+env/
+
+# Salidas que se regeneran con exportar.py y preparar_kaggle.py
+exportacion/
+kaggle_subir/
+reportes/
+
+# Modelos y pesos: van en Hugging Face, no en GitHub (son de varios GB)
+*.gguf
+*.safetensors
+*.bin
+*.pt
+salida/
+checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Secretos y credenciales
+.env
+.env.*
+*.key
+hf_token*
+kaggle.json
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
