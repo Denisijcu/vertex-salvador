@@ -193,3 +193,58 @@ y prueba corta antes de la corrida larga. `entrenar_kaggle.py` **no cambió** en
   lote de "cambio de tema" queda descartado por ahora. Detalles de calidad: en Haití no menciona a los críticos (ONU,
   UNA-Haití) y llama "medios y expertos" a citas de los dos gobiernos; en el CECOT la atribución de la fecha de los
   deportados no es exacta. Siguiente: las 10 preguntas de `eval/prueba_bases.jsonl`, cada una en un chat nuevo.
+
+## 12. Documentación para entregar (19 de noviembre de 2026)
+
+- `README.md` (GitHub) reescrito para el público; lo técnico pasó a `DESARROLLO.md` (con las cifras corregidas: 153
+  fuentes públicas + 1 privada de prueba; antes decía 131 en una fila y 154 en otra).
+- `GUIA_INSTALACION.md`: instalación y uso paso a paso, ajustes necesarios, límites y solución de problemas.
+- `huggingface/vertex-salvador-GGUF/README.md` y `huggingface/vertex-salvador/README.md`: fichas de los dos repos de
+  Hugging Face (YAML comprobado; el LoRA decía idioma "en", ahora "es" y "en").
+- `agente/instalar.bat` + `mostrar_config.py`: instalador de un clic que crea `.venv`, instala `mcp`, prueba el
+  servidor y muestra el bloque de `mcp.json` con las rutas reales. `agente/SISTEMA.txt`: la instrucción de sistema
+  limpia (en LM Studio se había pegado con las comillas y saltos de línea del código Python).
+- Fallos encontrados y corregidos en la revisión: `linea_tiempo` cortaba a 15 eventos sin avisar (en Haití se perdían
+  8 de 23, incluido el estado del caso); ahora 25 y avisa. `probar_servidor.py` no devolvía código de error al
+  fallar; ahora sí, y tiene 13 comprobaciones. Si la carpeta `agente` se mueve fuera del proyecto, el servidor da un
+  mensaje claro en vez de un error de Python.
+- Probado en limpio: copia nueva del proyecto, `.venv` nuevo, `mcp` 2.3.0, `probar_servidor.py` TODO OK, y prueba por
+  el protocolo MCP real (stdio): lista las 4 herramientas y responde a 8 llamadas sin error.
+- `.gitignore` ampliado: modelos y pesos (`*.gguf`, `*.safetensors`), secretos (`.env`, `kaggle.json`), entornos.
+- Publicado: GitHub `Denisijcu/vertex-salvador`; Hugging Face `Denisijcu/vertex-salvador-GGUF` (GGUF Q4_K_M) y
+  `Denisijcu/vertex-salvador` (LoRA).
+
+## 13. vertex-salvador-studio y primera evaluación completa (19 de noviembre de 2026)
+
+La interfaz vive en su propio proyecto, `E:\vertex-salvador-studio`, con su bitácora. Aquí va lo que toca al modelo.
+
+- **Studio**: Angular 22 + Angular Material 3 (sin Tailwind) delante de un backend FastAPI en el puerto 8710. Las
+  cuatro herramientas se importan de esta carpeta, sin copiarlas. Chat en vivo (se ve qué busca el modelo y la
+  respuesta mientras se escribe), panel de fuentes con el texto completo y el enlace original, línea de tiempo,
+  cifras, documentos propios y estado. Las cifras de la respuesta que no aparecen en los documentos consultados se
+  resaltan en ámbar. Queda como estándar para los frontends de Vertex Coders.
+- **Evaluación** (`backend\evaluar.py`, las 10 preguntas de `eval\prueba_bases.jsonl` contra el modelo real, 763 s):
+  bien en inglés (H03), presos políticos con las dos versiones atribuidas (A02), pacto con pandillas separando 2012
+  de lo actual (A03), homicidios de 2025 con su fuente (F01: 82, que es la cifra oficial de cierre de año), línea de
+  tiempo con su herramienta (T01) y saludo sin herramientas (T02). Sin inventar nada en Soyapango (H02).
+- **Fallos del modelo**, apuntados en `eval\notas_v1_1.md` para una v1.1: una fecha inventada (F01), «septiembre de
+  2026 es el futuro» (F02), una atribución al gobierno que no está en las fuentes (A01), una respuesta casi sin
+  apoyo en documentos (H01), y en la prueba de la tregua: «criticada por la oposición», «académicos como Nueva
+  Sociedad» (es una revista) y «una caída espectacular» (adjetivo que opina).
+- **Portero** (V-SRT) probado de punta a punta: arrancado hacia LM Studio y con el juez de la nube apagado, para que
+  nada salga de la computadora. Bloqueó un intento de cambiar las instrucciones (puntuación 0,80) y dejó pasar la
+  pregunta sobre Haití con 5 fuentes, sin cifras sin respaldo.
+- **Pendiente para v1.1 en el código**: `EPOCAS` en `servidor_mcp.py` llega hasta E14 (falta E15); el servidor indexa
+  `docs_privados\LEEME.txt` como documento privado; decidir el nombre de T04 en `EPOCAS.md`.
+- **Cierre**: libro en dos ediciones en `libro\`, fuera del repositorio (`libro/` en el `.gitignore`). Segundo libro
+  del método de *El dato revisado* (vertex-exilio).
+  - Inglés (principal): *Search Before You Speak — Teaching a Small Language Model to Cite Its Sources on a Disputed
+    Subject*, 129 páginas, en `libro\english`.
+  - Español: *Busca antes de hablar — Cómo enseñar a un modelo de lenguaje pequeño a citar sus fuentes en un tema
+    disputado*, 134 páginas, en `libro\spanish`.
+  - Cada una con manuscrito, PDF 6x9, portadas (eBook y paperback), ficha KDP y apéndice D con el código real
+    generado por `generar_apendice_codigo.py`. El EPUB se construye en Windows (`python build_epub.py manuscrito`).
+  - Pendiente del cierre: el video promo con Manim.
+- Aclaración de Denis (19/11, noche): lo de donar el modelo era una broma. El proyecto será público; si a alguien del
+  gobierno de El Salvador le interesa, tendrá todo su apoyo, pero no va a contactarlos. La conclusión de los dos
+  libros y las fichas KDP se corrigieron en ese sentido (las páginas no cambian: 129 y 134).
